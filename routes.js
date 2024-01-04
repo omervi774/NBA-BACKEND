@@ -1,9 +1,11 @@
 import express from "express";
 import axios from "axios";
+import dotenv from "dotenv";
+dotenv.config();
 
 const router = express();
-const url = "https://api-nba-v1.p.rapidapi.com";
-const apiKey = "c582f7932fmsh94e4622ba1b5892p1cf3dbjsnae1e1e44c1ac";
+const url = process.env.url;
+const apiKey = process.env.API_KEY;
 const todayDate = new Date();
 const whatMonth = todayDate.getMonth();
 
